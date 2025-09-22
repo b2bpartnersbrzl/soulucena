@@ -48,10 +48,10 @@ header {
 .mobile-menu ul li a {
     display: block;
     padding: 8px 15px;
-    background-color: #f0f0f0;
+    background-color: #99CCCC; /* Cor de fundo das cápsulas do menu mobile */
     border-radius: 20px;
     text-decoration: none;
-    color: #669999; /* Cor do texto do menu mobile */
+    color: #669999; 
 }
 
 /* Estilos para Desktop (a partir de 768px de largura) */
@@ -85,6 +85,6 @@ header {
     .desktop-menu ul li a {
         text-decoration: none;
         font-weight: bold;
-        color: #669999; /* Cor do texto do menu desktop */
+        color: #669999;
     }
 }
