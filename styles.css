@@ -7,9 +7,13 @@
 
 body {
     font-family: sans-serif;
-    /* Adiciona um padding no topo do body para evitar que o conteúdo fique por baixo do cabeçalho fixo */
-    /* Este valor pode precisar de ajuste dependendo da altura final do seu cabeçalho */
-    padding-top: 100px; /* Valor inicial para mobile. Ajustaremos para desktop. */
+    /* Remove o padding do body */
+    padding-top: 0; 
+}
+
+/* Adiciona um padding no topo do main para evitar que o conteúdo fique por baixo do cabeçalho fixo */
+main {
+    padding-top: 100px; /* Valor inicial para mobile */
 }
 
 /* Contêiner do cabeçalho fixo */
@@ -89,8 +93,8 @@ header {
 
 /* Estilos para Desktop (a partir de 768px de largura) */
 @media (min-width: 768px) {
-    /* Ajuste o padding do body para desktop */
-    body {
+    /* Ajuste o padding do main para desktop */
+    main {
         padding-top: 130px; /* Aumente o valor do padding para acomodar o cabeçalho maior no desktop */
     }
 
