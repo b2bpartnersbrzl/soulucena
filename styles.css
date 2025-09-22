@@ -154,17 +154,20 @@ header {
 
 .carousel-content {
     display: flex;
+    /* Adiciona uma largura mínima para garantir a rolagem */
+    width: fit-content;
 }
 
 .carousel-content img {
-    height: 150px; /* Altura fixa para as imagens do carrossel */
-    width: auto; /* A largura se ajusta automaticamente para manter a proporção */
+    height: 100px; /* Altura fixa para as imagens do carrossel em mobile */
+    width: auto;
     flex-shrink: 0; /* Impede que as imagens encolham para caber no contêiner */
+    margin-right: 15px; /* Adiciona um espaço entre as imagens para melhor visualização */
 }
 
 /* Ajustes para desktop */
 @media (min-width: 768px) {
     .carousel-content img {
-        height: 200px; /* Aumenta a altura das imagens do carrossel em desktop */
+        height: 150px; /* Aumenta a altura das imagens do carrossel em desktop */
     }
 }
