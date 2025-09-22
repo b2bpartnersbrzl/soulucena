@@ -7,7 +7,21 @@
 
 body {
     font-family: sans-serif;
+    /* Adiciona um padding no topo do body para evitar que o conteúdo fique por baixo do cabeçalho fixo */
+    /* Este valor pode precisar de ajuste dependendo da altura final do seu cabeçalho */
+    padding-top: 100px; /* Valor inicial para mobile. Ajustaremos para desktop. */
 }
+
+/* Contêiner do cabeçalho fixo */
+.fixed-header-container {
+    position: fixed; /* Torna o contêiner fixo no topo da janela de visualização */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Adiciona uma cor de fundo para que o conteúdo não apareça por trás */
+    z-index: 1000; /* Garante que o cabeçalho fique sobre outros elementos */
+}
+
 
 /* Estilos para Mobile (o padrão, para começar) */
 header {
@@ -70,11 +84,16 @@ header {
     height: 1px;
     width: 100%;
     margin-top: 0px; /* Espaço entre o menu e a linha no mobile */
-    margin-bottom: 10px; /* Espaço entre a linha e o próximo conteúdo */
+    margin-bottom: 0px; /* Ajuste para o novo contêiner */
 }
 
 /* Estilos para Desktop (a partir de 768px de largura) */
 @media (min-width: 768px) {
+    /* Ajuste o padding do body para desktop */
+    body {
+        padding-top: 130px; /* Aumente o valor do padding para acomodar o cabeçalho maior no desktop */
+    }
+
     header {
         flex-direction: row;
         justify-content: space-between;
@@ -110,6 +129,6 @@ header {
     /* Ajuste da linha separadora para desktop */
     .header-line {
         margin-top: 0px; /* Espaço entre o cabeçalho e a linha no desktop */
-        margin-bottom: 10px; /* Espaço entre a linha e o próximo conteúdo no desktop */
+        margin-bottom: 0px; /* Ajuste para o novo contêiner */
     }
 }
