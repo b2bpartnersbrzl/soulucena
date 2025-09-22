@@ -51,15 +51,16 @@ header {
     background-color: #D1E1E1; /* Cor de fundo das cápsulas do menu mobile */
     border-radius: 20px;
     text-decoration: none;
-    color: #669999; 
+    color: #669999;
 }
 
-/* Estilos da linha do cabeçalho */
+/* Estilo da linha separadora, agora universal para todas as telas */
 .header-line {
     background-color: #669999;
     height: 1px;
     width: 100%;
     margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 /* Estilos para Desktop (a partir de 768px de largura) */
