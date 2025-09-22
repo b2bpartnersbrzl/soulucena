@@ -48,7 +48,7 @@ header {
 .mobile-menu ul li a {
     display: block;
     padding: 8px 15px;
-    background-color: #99CCCC; /* Cor de fundo das cápsulas do menu mobile */
+    background-color: #D1E1E1; /* Cor de fundo das cápsulas do menu mobile */
     border-radius: 20px;
     text-decoration: none;
     color: #669999; 
