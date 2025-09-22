@@ -54,6 +54,14 @@ header {
     color: #669999; 
 }
 
+/* Estilos da linha do cabeçalho */
+.header-line {
+    background-color: #669999;
+    height: 1px;
+    width: 100%;
+    margin-top: 10px;
+}
+
 /* Estilos para Desktop (a partir de 768px de largura) */
 @media (min-width: 768px) {
     header {
