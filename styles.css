@@ -69,7 +69,7 @@ header {
     background-color: #669999;
     height: 1px;
     width: 100%;
-    margin-top: 10px; /* Espaço entre o menu e a linha no mobile */
+    margin-top: 0px; /* Espaço entre o menu e a linha no mobile */
     margin-bottom: 20px; /* Espaço entre a linha e o próximo conteúdo */
 }
 
