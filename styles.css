@@ -1,4 +1,6 @@
-/* Estilos gerais */
+/* =========================
+   Reset e base
+   ========================= */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,27 +9,30 @@
 
 body {
     font-family: sans-serif;
-    /* Remove o padding do body */
-    padding-top: 0; 
+    padding-top: 0; /* já estava zerado no original */
 }
 
-/* Adiciona um padding no topo do main para evitar que o conteúdo fique por baixo do cabeçalho fixo */
+/* Conteúdo colado no cabeçalho (sem compensações) */
 main {
-    padding-top: 100px; /* Valor inicial para mobile */
+    padding-top: 0;
+    margin-top: 0;
 }
+
+/* =========================
+   Cabeçalho (inalterado)
+   ========================= */
 
 /* Contêiner do cabeçalho fixo */
 .fixed-header-container {
-    position: fixed; /* Torna o contêiner fixo no topo da janela de visualização */
+    position: fixed; /* mantém fixo no topo */
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #fff; /* Adiciona uma cor de fundo para que o conteúdo não apareça por trás */
-    z-index: 1000; /* Garante que o cabeçalho fique sobre outros elementos */
+    background-color: #fff; /* fundo sólido para cobrir conteúdo por trás */
+    z-index: 1000; /* sobrepõe os demais elementos */
 }
 
-
-/* Estilos para Mobile (o padrão, para começar) */
+/* Estilos para Mobile (padrão) */
 header {
     display: flex;
     flex-direction: column;
@@ -35,20 +40,16 @@ header {
     padding: 10px;
 }
 
-.logo-container {
-    padding: 0;
-}
+.logo-container { padding: 0; }
 
 .logo {
-    height: 90px; /* Tamanho da logo em telas pequenas (mobile) */
+    height: 90px; /* tamanho em telas pequenas (mobile) */
 }
 
-/* Esconde o menu de desktop por padrão */
-.desktop-menu {
-    display: none;
-}
+/* Menu desktop oculto por padrão */
+.desktop-menu { display: none; }
 
-/* Estilos do menu mobile */
+/* Menu mobile com rolagem horizontal */
 .mobile-menu {
     width: 100%;
     overflow-x: auto;
@@ -57,15 +58,9 @@ header {
     margin-top: 10px;
 }
 
-/* Ocultar a barra de rolagem visualmente, mantendo a funcionalidade de rolagem */
-.mobile-menu::-webkit-scrollbar {
-    display: none;
-}
-
-.mobile-menu {
-    -ms-overflow-style: none; /* IE e Edge */
-    scrollbar-width: none; /* Firefox */
-}
+/* Oculta a barra de rolagem visualmente, preservando a rolagem */
+.mobile-menu::-webkit-scrollbar { display: none; }
+.mobile-menu { -ms-overflow-style: none; scrollbar-width: none; }
 
 .mobile-menu ul {
     list-style: none;
@@ -76,26 +71,30 @@ header {
 .mobile-menu ul li a {
     display: block;
     padding: 8px 15px;
-    background-color: #D1E1E1; /* Cor de fundo das cápsulas do menu mobile */
+    background-color: #D1E1E1;
     border-radius: 20px;
     text-decoration: none;
     color: #669999;
 }
 
-/* Estilos da linha separadora para mobile (o padrão) */
+/* Linha separadora (mobile) */
 .header-line {
     background-color: #669999;
     height: 1px;
     width: 100%;
-    margin-top: 0px; /* Espaço entre o menu e a linha no mobile */
-    margin-bottom: 0px; /* Ajuste para o novo contêiner */
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-/* Estilos para Desktop (a partir de 768px de largura) */
+/* =========================
+   Desktop ≥ 768px (cabeçalho inalterado)
+   ========================= */
 @media (min-width: 768px) {
-    /* Ajuste o padding do main para desktop */
+
+    /* main continua sem compensação mesmo no desktop */
     main {
-        padding-top: 130px; /* Aumente o valor do padding para acomodar o cabeçalho maior no desktop */
+        padding-top: 0;
+        margin-top: 0;
     }
 
     header {
@@ -104,19 +103,10 @@ header {
         align-items: center;
     }
 
-    /* Ajuste da logo para desktop */
-    .logo {
-        height: 120px; /* Aumenta o tamanho da logo em telas grandes (desktop) */
-    }
+    .logo { height: 120px; }
 
-    /* Mostra o menu de desktop e esconde o de mobile */
-    .desktop-menu {
-        display: block;
-    }
-
-    .mobile-menu {
-        display: none;
-    }
+    .desktop-menu { display: block; }
+    .mobile-menu { display: none; }
 
     .desktop-menu ul {
         list-style: none;
@@ -130,48 +120,47 @@ header {
         color: #669999;
     }
 
-    /* Ajuste da linha separadora para desktop */
     .header-line {
-        margin-top: 0px; /* Espaço entre o cabeçalho e a linha no desktop */
-        margin-bottom: 0px; /* Ajuste para o novo contêiner */
+        margin-top: 0;
+        margin-bottom: 0;
     }
 }
-/* Estilos para o Carrossel */
+
+/* =========================
+   Carrossel (refeito)
+   Requisitos:
+   - Uma única imagem panorâmica
+   - Rolagem horizontal manual
+   - Sem “respiro” sob o cabeçalho
+   ========================= */
+
+/* Container com rolagem horizontal natural */
 .carousel-container {
     width: 100%;
-    overflow-x: scroll; /* Ativa a rolagem horizontal */
-    overflow-y: hidden; /* Oculta a rolagem vertical */
-    white-space: nowrap; /* Impede que as imagens quebrem para a próxima linha */
-    -webkit-overflow-scrolling: touch; /* Melhor rolagem em dispositivos iOS */
-    margin-top: 10px; /* Adiciona um espaço abaixo da linha do cabeçalho */
+    overflow-x: auto;          /* rolagem horizontal */
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;       /* evita quebra */
+    margin-top: 0;             /* sem espaço abaixo do header */
 }
 
-/* Ocultar a barra de rolagem visualmente */
-.carousel-container::-webkit-scrollbar {
-    display: none;
+/* Oculta a barra de rolagem visualmente */
+.carousel-container::-webkit-scrollbar { display: none; }
+.carousel-container { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Trilho simples para uma única imagem */
+.carousel-track { display: inline-block; }
+
+/* Imagem panorâmica: rola manualmente em mobile e desktop */
+.carousel-track img {
+    display: block;
+    height: 110px;  /* mobile */
+    width: auto;    /* mantém proporção; largura maior que o viewport gera rolagem */
 }
 
-.carousel-container {
-    -ms-overflow-style: none; /* IE e Edge */
-    scrollbar-width: none; /* Firefox */
-}
-
-.carousel-content {
-    display: flex;
-    /* Adiciona uma largura mínima para garantir a rolagem */
-    width: fit-content;
-}
-
-.carousel-content img {
-    height: 100px; /* Altura fixa para as imagens do carrossel em mobile */
-    width: auto;
-    flex-shrink: 0; /* Impede que as imagens encolham para caber no contêiner */
-    margin-right: 15px; /* Adiciona um espaço entre as imagens para melhor visualização */
-}
-
-/* Ajustes para desktop */
+/* Ajuste de altura no desktop */
 @media (min-width: 768px) {
-    .carousel-content img {
-        height: 150px; /* Aumenta a altura das imagens do carrossel em desktop */
+    .carousel-track img {
+        height: 160px; /* desktop */
     }
 }
