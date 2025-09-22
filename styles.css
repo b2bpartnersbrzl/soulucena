@@ -132,3 +132,39 @@ header {
         margin-bottom: 0px; /* Ajuste para o novo contêiner */
     }
 }
+/* Estilos para o Carrossel */
+.carousel-container {
+    width: 100%;
+    overflow-x: scroll; /* Ativa a rolagem horizontal */
+    overflow-y: hidden; /* Oculta a rolagem vertical */
+    white-space: nowrap; /* Impede que as imagens quebrem para a próxima linha */
+    -webkit-overflow-scrolling: touch; /* Melhor rolagem em dispositivos iOS */
+    margin-top: 10px; /* Adiciona um espaço abaixo da linha do cabeçalho */
+}
+
+/* Ocultar a barra de rolagem visualmente */
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-container {
+    -ms-overflow-style: none; /* IE e Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.carousel-content {
+    display: flex;
+}
+
+.carousel-content img {
+    height: 150px; /* Altura fixa para as imagens do carrossel */
+    width: auto; /* A largura se ajusta automaticamente para manter a proporção */
+    flex-shrink: 0; /* Impede que as imagens encolham para caber no contêiner */
+}
+
+/* Ajustes para desktop */
+@media (min-width: 768px) {
+    .carousel-content img {
+        height: 200px; /* Aumenta a altura das imagens do carrossel em desktop */
+    }
+}
