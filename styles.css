@@ -70,7 +70,7 @@ header {
     height: 1px;
     width: 100%;
     margin-top: 0px; /* Espaço entre o menu e a linha no mobile */
-    margin-bottom: 20px; /* Espaço entre a linha e o próximo conteúdo */
+    margin-bottom: 5px; /* Espaço entre a linha e o próximo conteúdo */
 }
 
 /* Estilos para Desktop (a partir de 768px de largura) */
