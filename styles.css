@@ -1,0 +1,85 @@
+/* Estilos gerais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+/* Estilos para Mobile (o padrão, para começar) */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+.logo-container {
+    padding: 0;
+}
+
+.logo {
+    height: 40px; /* Ajuste o tamanho da sua logo aqui */
+}
+
+/* Esconde o menu de desktop por padrão */
+.desktop-menu {
+    display: none;
+}
+
+/* Estilos do menu mobile */
+.mobile-menu {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 10px;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.mobile-menu ul li a {
+    display: block;
+    padding: 8px 15px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Estilos para Desktop (a partir de 768px de largura) */
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Mostra o menu de desktop e esconde o de mobile */
+    .desktop-menu {
+        display: block;
+    }
+    
+    .mobile-menu {
+        display: none;
+    }
+
+    .desktop-menu ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+
+    .desktop-menu ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+}
