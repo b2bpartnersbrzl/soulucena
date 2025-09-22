@@ -53,6 +53,7 @@ header {
     list-style: none;
     display: flex;
     gap: 10px;
+    padding: 0 10px; /* Adiciona um pequeno padding nas laterais */
 }
 
 .mobile-menu ul li a {
@@ -64,7 +65,7 @@ header {
     color: #669999;
 }
 
-/* Estilos da linha separadora para mobile (o padrão) */
+/* Estilo da linha separadora para mobile (o padrão) */
 .header-line {
     background-color: #669999;
     height: 1px;
