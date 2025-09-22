@@ -64,13 +64,13 @@ header {
     color: #669999;
 }
 
-/* Estilo da linha separadora, agora universal para todas as telas */
+/* Estilos da linha separadora para mobile (o padrão) */
 .header-line {
     background-color: #669999;
     height: 1px;
     width: 100%;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 10px; /* Espaço entre o menu e a linha no mobile */
+    margin-bottom: 20px; /* Espaço entre a linha e o próximo conteúdo */
 }
 
 /* Estilos para Desktop (a partir de 768px de largura) */
@@ -105,5 +105,11 @@ header {
         text-decoration: none;
         font-weight: bold;
         color: #669999;
+    }
+
+    /* Ajuste da linha separadora para desktop */
+    .header-line {
+        margin-top: 30px; /* Espaço entre o cabeçalho e a linha no desktop */
+        margin-bottom: 40px; /* Espaço entre a linha e o próximo conteúdo no desktop */
     }
 }
