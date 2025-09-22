@@ -132,14 +132,18 @@ header {
         margin-bottom: 0px; /* Ajuste para o novo contêiner */
     }
 }
-/* Estilos para o Carrossel */
+
+/* Estilos para o Carrossel - CORREÇÕES APLICADAS */
 .carousel-container {
     width: 100%;
-    overflow-x: scroll; /* Ativa a rolagem horizontal */
-    overflow-y: hidden; /* Oculta a rolagem vertical */
-    white-space: nowrap; /* Impede que as imagens quebrem para a próxima linha */
-    -webkit-overflow-scrolling: touch; /* Melhor rolagem em dispositivos iOS */
-    margin-top: 10px; /* Adiciona um espaço abaixo da linha do cabeçalho */
+    overflow-x: auto; /* Altere para 'auto' para garantir rolagem quando necessário */
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 10px;
+    /* Garante que o carrossel fique abaixo do cabeçalho fixo */
+    position: relative;
+    z-index: 1;
 }
 
 /* Ocultar a barra de rolagem visualmente */
@@ -153,21 +157,31 @@ header {
 }
 
 .carousel-content {
-    display: flex;
-    /* Adiciona uma largura mínima para garantir a rolagem */
-    width: fit-content;
+    display: inline-block; /* Altere de flex para inline-block para funcionar melhor com white-space: nowrap */
+    width: auto;
 }
 
 .carousel-content img {
     height: 100px; /* Altura fixa para as imagens do carrossel em mobile */
     width: auto;
-    flex-shrink: 0; /* Impede que as imagens encolham para caber no contêiner */
-    margin-right: 15px; /* Adiciona um espaço entre as imagens para melhor visualização */
+    display: inline-block; /* Para funcionar com white-space: nowrap */
+    vertical-align: middle;
+    margin-right: 15px;
 }
 
-/* Ajustes para desktop */
+/* Ajustes para desktop - CORREÇÕES APLICADAS */
 @media (min-width: 768px) {
     .carousel-content img {
         height: 150px; /* Aumenta a altura das imagens do carrossel em desktop */
+    }
+    
+    /* Garantir que o carrossel tenha rolagem horizontal no desktop */
+    .carousel-container {
+        overflow-x: auto;
+        cursor: grab; /* Indica que o elemento pode ser arrastado/rolado */
+    }
+    
+    .carousel-container:active {
+        cursor: grabbing; /* Feedback visual ao arrastar */
     }
 }
