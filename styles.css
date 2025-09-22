@@ -110,6 +110,6 @@ header {
     /* Ajuste da linha separadora para desktop */
     .header-line {
         margin-top: 0px; /* Espaço entre o cabeçalho e a linha no desktop */
-        margin-bottom: 40px; /* Espaço entre a linha e o próximo conteúdo no desktop */
+        margin-bottom: 10px; /* Espaço entre a linha e o próximo conteúdo no desktop */
     }
 }
