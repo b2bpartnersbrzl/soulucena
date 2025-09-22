@@ -7,21 +7,7 @@
 
 body {
     font-family: sans-serif;
-    /* Adiciona um padding no topo do body para evitar que o conteúdo fique por baixo do cabeçalho fixo */
-    /* Este valor pode precisar de ajuste dependendo da altura final do seu cabeçalho */
-    padding-top: 100px; /* Valor inicial para mobile. Ajustaremos para desktop. */
 }
-
-/* Contêiner do cabeçalho fixo */
-.fixed-header-container {
-    position: fixed; /* Torna o contêiner fixo no topo da janela de visualização */
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff; /* Adiciona uma cor de fundo para que o conteúdo não apareça por trás */
-    z-index: 1000; /* Garante que o cabeçalho fique sobre outros elementos */
-}
-
 
 /* Estilos para Mobile (o padrão, para começar) */
 header {
@@ -84,16 +70,11 @@ header {
     height: 1px;
     width: 100%;
     margin-top: 0px; /* Espaço entre o menu e a linha no mobile */
-    margin-bottom: 0px; /* Ajuste para o novo contêiner */
+    margin-bottom: 10px; /* Espaço entre a linha e o próximo conteúdo */
 }
 
 /* Estilos para Desktop (a partir de 768px de largura) */
 @media (min-width: 768px) {
-    /* Ajuste o padding do body para desktop */
-    body {
-        padding-top: 130px; /* Aumente o valor do padding para acomodar o cabeçalho maior no desktop */
-    }
-
     header {
         flex-direction: row;
         justify-content: space-between;
@@ -129,59 +110,6 @@ header {
     /* Ajuste da linha separadora para desktop */
     .header-line {
         margin-top: 0px; /* Espaço entre o cabeçalho e a linha no desktop */
-        margin-bottom: 0px; /* Ajuste para o novo contêiner */
-    }
-}
-
-/* Estilos para o Carrossel - CORREÇÕES APLICADAS */
-.carousel-container {
-    width: 100%;
-    overflow-x: auto; /* Altere para 'auto' para garantir rolagem quando necessário */
-    overflow-y: hidden;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    margin-top: 10px;
-    /* Garante que o carrossel fique abaixo do cabeçalho fixo */
-    position: relative;
-    z-index: 1;
-}
-
-/* Ocultar a barra de rolagem visualmente */
-.carousel-container::-webkit-scrollbar {
-    display: none;
-}
-
-.carousel-container {
-    -ms-overflow-style: none; /* IE e Edge */
-    scrollbar-width: none; /* Firefox */
-}
-
-.carousel-content {
-    display: inline-block; /* Altere de flex para inline-block para funcionar melhor com white-space: nowrap */
-    width: auto;
-}
-
-.carousel-content img {
-    height: 100px; /* Altura fixa para as imagens do carrossel em mobile */
-    width: auto;
-    display: inline-block; /* Para funcionar com white-space: nowrap */
-    vertical-align: middle;
-    margin-right: 15px;
-}
-
-/* Ajustes para desktop - CORREÇÕES APLICADAS */
-@media (min-width: 768px) {
-    .carousel-content img {
-        height: 150px; /* Aumenta a altura das imagens do carrossel em desktop */
-    }
-    
-    /* Garantir que o carrossel tenha rolagem horizontal no desktop */
-    .carousel-container {
-        overflow-x: auto;
-        cursor: grab; /* Indica que o elemento pode ser arrastado/rolado */
-    }
-    
-    .carousel-container:active {
-        cursor: grabbing; /* Feedback visual ao arrastar */
+        margin-bottom: 10px; /* Espaço entre a linha e o próximo conteúdo no desktop */
     }
 }
