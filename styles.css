@@ -33,7 +33,7 @@ header {
 /* Estilos do menu mobile */
 .mobile-menu {
     width: 100%;
-    overflow-x: auto;
+    overflow-x: hidden; /* Remove a barra de rolagem horizontal */
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
     margin-top: 10px;
@@ -51,7 +51,7 @@ header {
     background-color: #D1E1E1; /* Cor de fundo das cápsulas do menu mobile */
     border-radius: 20px;
     text-decoration: none;
-    color: #669999;
+    color: #669999; 
 }
 
 /* Estilo da linha separadora, agora universal para todas as telas */
