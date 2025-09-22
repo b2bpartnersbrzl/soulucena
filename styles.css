@@ -22,7 +22,7 @@ header {
 }
 
 .logo {
-    height: 90px; /* Ajuste o tamanho da sua logo aqui */
+    height: 90px; /* Tamanho da logo em telas pequenas (mobile) */
 }
 
 /* Esconde o menu de desktop por padrão */
@@ -60,6 +60,11 @@ header {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+    }
+
+    /* Ajuste da logo para desktop */
+    .logo {
+        height: 120px; /* Aumenta o tamanho da logo em telas grandes (desktop) */
     }
 
     /* Mostra o menu de desktop e esconde o de mobile */
