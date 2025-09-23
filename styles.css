@@ -9,86 +9,6 @@ body {
     font-family: 'Noto Sans', sans-serif;
 }
 
-/* Estilos para o cabeçalho fixo */
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #fff; /* Adicione um fundo para evitar transparência */
-    z-index: 1000; /* Garante que o cabeçalho fique sobre outros elementos */
-}
-
-/* Estilos da linha separadora para mobile (o padrão) */
-.header-line {
-    background-color: #669999;
-    height: 1px;
-    width: 100%;
-    margin-top: 0;
-    margin-bottom: 0;
-    position: fixed;
-    top: 126px; /* Posição da linha no mobile (altura exata do cabeçalho) */
-    z-index: 1000;
-}
-
-/* Afasta o conteúdo principal para que não fique escondido atrás do cabeçalho */
-.panoramic-wrapper {
-    position: relative;
-    margin-top: 127px; /* Altura do cabeçalho + linha no mobile */
-    margin-bottom: 0;
-}
-
-.logo-container {
-    padding: 0;
-}
-
-.logo {
-    height: 90px;
-}
-
-/* Esconde o menu de desktop por padrão */
-.desktop-menu {
-    display: none;
-}
-
-/* Estilos do menu mobile */
-.mobile-menu {
-    width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    margin-top: 10px;
-}
-
-/* Ocultar a barra de rolagem visualmente, mantendo a funcionalidade de rolagem */
-.mobile-menu::-webkit-scrollbar {
-    display: none;
-}
-
-.mobile-menu {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-.mobile-menu ul {
-    list-style: none;
-    display: flex;
-    gap: 10px;
-}
-
-.mobile-menu ul li a {
-    display: block;
-    padding: 8px 15px;
-    background-color: #D1E1E1;
-    border-radius: 20px;
-    text-decoration: none;
-    color: #669999;
-}
-
-
 /* Estilos para o wrapper da imagem panorâmica */
 .panoramic-wrapper {
     position: relative;
@@ -101,11 +21,11 @@ header {
     position: absolute;
     top: 0;
     right: 0;
-    width: 20px;
+    width: 35px;
     height: 100%;
     background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
     pointer-events: none;
-    animation: pulse 1.5s infinite ease-in-out;
+    animation: pulse 1.2s infinite ease-in-out;
 }
 
 .panoramic-wrapper::before {
@@ -113,11 +33,11 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    width: 20px;
+    width: 35px;
     height: 100%;
     background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
     pointer-events: none;
-    animation: pulse 1.5s infinite ease-in-out;
+    animation: pulse 2s infinite ease-in-out;
     opacity: 0;
 }
 
@@ -126,7 +46,7 @@ header {
         transform: scaleX(1);
     }
     50% {
-        transform: scaleX(1.3);
+        transform: scaleX(1.3); /* Valor para uma pulsação mais evidente */
     }
     100% {
         transform: scaleX(1);
@@ -201,11 +121,53 @@ header {
     flex-direction: column;
     align-items: flex-start;
     padding: 10px;
-    position: fixed;
-    top: 0;
+}
+
+.logo-container {
+    padding: 0;
+}
+
+.logo {
+    height: 90px;
+}
+
+/* Esconde o menu de desktop por padrão */
+.desktop-menu {
+    display: none;
+}
+
+/* Estilos do menu mobile */
+.mobile-menu {
     width: 100%;
-    background-color: #fff;
-    z-index: 1000;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 10px;
+}
+
+/* Ocultar a barra de rolagem visualmente, mantendo a funcionalidade de rolagem */
+.mobile-menu::-webkit-scrollbar {
+    display: none;
+}
+
+.mobile-menu {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.mobile-menu ul li a {
+    display: block;
+    padding: 8px 15px;
+    background-color: #D1E1E1;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #669999;
 }
 
 /* Estilos da linha separadora para mobile (o padrão) */
@@ -215,9 +177,6 @@ header {
     width: 100%;
     margin-top: 0px;
     margin-bottom: 0px;
-    position: fixed;
-    top: 126px;
-    z-index: 1000;
 }
 
 /* Estilos para Desktop (a partir de 768px de largura) */
@@ -258,10 +217,5 @@ header {
     .header-line {
         margin-top: 0px;
         margin-bottom: 0px;
-        top: 140px;
-    }
-
-    .panoramic-wrapper {
-        margin-top: 141px; /* Altura total do cabeçalho + linha no desktop */
     }
 }
