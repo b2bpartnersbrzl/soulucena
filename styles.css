@@ -9,6 +9,29 @@ body {
     font-family: sans-serif;
 }
 
+/* Estilos para a imagem panorâmica */
+.panoramic-container {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Ocultar a barra de rolagem visualmente, mantendo a funcionalidade de rolagem */
+.panoramic-container::-webkit-scrollbar {
+    display: none;
+}
+
+.panoramic-container {
+    -ms-overflow-style: none; /* IE e Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.panoramic-image {
+    width: auto;
+    height: 120px;
+}
+
 /* Estilos para Mobile (o padrão, para começar) */
 header {
     display: flex;
