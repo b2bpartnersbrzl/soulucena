@@ -21,7 +21,7 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    width: 60px;
+    width: 20px;
     height: 100%;
     background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
     pointer-events: none;
@@ -33,7 +33,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 60px;
+    width: 20px;
     height: 100%;
     background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
     pointer-events: none;
