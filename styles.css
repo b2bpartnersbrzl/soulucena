@@ -30,14 +30,14 @@ header {
     margin-top: 0;
     margin-bottom: 0;
     position: fixed;
-    top: 130px; /* Posição da linha no mobile (ajuste conforme necessário) */
+    top: 126px; /* Posição da linha no mobile (altura exata do cabeçalho) */
     z-index: 1000;
 }
 
 /* Afasta o conteúdo principal para que não fique escondido atrás do cabeçalho */
 .panoramic-wrapper {
     position: relative;
-    margin-top: 131px; /* Altura do cabeçalho + linha no mobile (ajuste conforme necessário) */
+    margin-top: 127px; /* Altura do cabeçalho + linha no mobile */
     margin-bottom: 0;
 }
 
@@ -195,13 +195,33 @@ header {
 }
 
 
+/* Estilos para Mobile (o padrão, para começar) */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+/* Estilos da linha separadora para mobile (o padrão) */
+.header-line {
+    background-color: #669999;
+    height: 1px;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    position: fixed;
+    top: 126px;
+    z-index: 1000;
+}
+
 /* Estilos para Desktop (a partir de 768px de largura) */
 @media (min-width: 768px) {
-    body {
-        /* Aumenta a margem do topo para o desktop */
-        margin-top: 141px;
-    }
-
     header {
         flex-direction: row;
         justify-content: space-between;
@@ -211,10 +231,6 @@ header {
     /* Ajuste da logo para desktop */
     .logo {
         height: 120px;
-    }
-    
-    .panoramic-wrapper {
-        margin-top: 0; /* O margin-top do body já resolve no desktop */
     }
 
     /* Mostra o menu de desktop e esconde o de mobile */
@@ -242,6 +258,10 @@ header {
     .header-line {
         margin-top: 0px;
         margin-bottom: 0px;
-        top: 140px; /* Posição da linha no desktop (ajuste conforme necessário) */
+        top: 140px;
+    }
+
+    .panoramic-wrapper {
+        margin-top: 141px; /* Altura total do cabeçalho + linha no desktop */
     }
 }
