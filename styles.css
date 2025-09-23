@@ -247,7 +247,7 @@ header {
     /* Ajuste das setas para desktop */
     .panoramic-wrapper::after,
     .panoramic-wrapper::before {
-        font-size: 16px;
+        font-size: 25px;
         width: 40px;
     }
 }
