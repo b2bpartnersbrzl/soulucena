@@ -12,6 +12,7 @@ body {
 /* Estilos para o wrapper da imagem panorâmica */
 .panoramic-wrapper {
     position: relative;
+    margin-bottom: 0; /* Garante que não haja espaço abaixo do wrapper */
 }
 
 /* Efeito de véu e animação de rolagem */
@@ -97,6 +98,7 @@ body {
 .panoramic-image {
     width: auto;
     height: 185px;
+    display: block; /* Remove o espaço padrão abaixo da imagem */
 }
 
 /* Estilos para a faixa de legenda */
