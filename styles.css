@@ -56,15 +56,15 @@ body {
 
 @keyframes pulseArrow {
     0% {
-        color: white;
+        color: #D1E1E1;
         transform: scaleX(1);
     }
     50% {
-        color: #D1E1E1;
+        color: #669999;
         transform: scaleX(1.1);
     }
     100% {
-        color: white;
+        color: #D1E1E1;
         transform: scaleX(1);
     }
 }
