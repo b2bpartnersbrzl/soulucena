@@ -105,10 +105,11 @@ body {
     background-color: #D1E1E1;
     color: #669999;
     text-align: center;
-    padding: 10px 0;
+    padding: 5px 0; /* Altura da faixa menor */
     margin-top: 0;
     font-weight: bold;
     letter-spacing: 2px;
+    font-size: 12px; /* Texto menor */
 }
 
 
