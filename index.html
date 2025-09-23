@@ -39,5 +39,37 @@
         <img src="images/imagem_marcas.webp" alt="Imagem com logotipos de marcas de carros" class="panoramic-image">
     </div>
 
+    <script>
+        const panoramicContainer = document.querySelector('.panoramic-container');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        panoramicContainer.addEventListener('mousedown', (e) => {
+            isDown = true;
+            panoramicContainer.classList.add('active');
+            startX = e.pageX - panoramicContainer.offsetLeft;
+            scrollLeft = panoramicContainer.scrollLeft;
+        });
+
+        panoramicContainer.addEventListener('mouseleave', () => {
+            isDown = false;
+            panoramicContainer.classList.remove('active');
+        });
+
+        panoramicContainer.addEventListener('mouseup', () => {
+            isDown = false;
+            panoramicContainer.classList.remove('active');
+        });
+
+        panoramicContainer.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - panoramicContainer.offsetLeft;
+            const walk = (x - startX) * 2; // Aumenta a sensibilidade da rolagem
+            panoramicContainer.scrollLeft = scrollLeft - walk;
+        });
+    </script>
+
 </body>
 </html>
