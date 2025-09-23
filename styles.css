@@ -6,13 +6,13 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 /* Estilos para o wrapper da imagem panorâmica */
 .panoramic-wrapper {
     position: relative;
-    margin-bottom: 0; /* Garante que não haja espaço abaixo do wrapper */
+    margin-bottom: 0;
 }
 
 /* Efeito de véu e animação de rolagem */
@@ -71,7 +71,7 @@ body {
     overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
-    cursor: grab; /* O cursor muda para indicar que pode ser arrastado */
+    cursor: grab;
 }
 
 /* Quando o usuário está arrastando, o cursor muda para "grabbing" */
@@ -85,8 +85,8 @@ body {
 }
 
 .panoramic-container {
-    -ms-overflow-style: none; /* IE e Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 /* Impede que o usuário selecione a imagem ao arrastar */
@@ -98,7 +98,7 @@ body {
 .panoramic-image {
     width: auto;
     height: 185px;
-    display: block; /* Remove o espaço padrão abaixo da imagem */
+    display: block;
 }
 
 /* Estilos para a faixa de legenda */
@@ -107,11 +107,11 @@ body {
     background-color: #D1E1E1;
     color: #669999;
     text-align: center;
-    padding: 5px 0; /* Altura da faixa menor */
+    padding: 5px 0;
     margin-top: 0;
     font-weight: bold;
     letter-spacing: 2px;
-    font-size: 12px; /* Texto menor */
+    font-size: 12px;
 }
 
 
@@ -128,7 +128,7 @@ header {
 }
 
 .logo {
-    height: 90px; /* Tamanho da logo em telas pequenas (mobile) */
+    height: 90px;
 }
 
 /* Esconde o menu de desktop por padrão */
@@ -151,8 +151,8 @@ header {
 }
 
 .mobile-menu {
-    -ms-overflow-style: none; /* IE e Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .mobile-menu ul {
@@ -164,7 +164,7 @@ header {
 .mobile-menu ul li a {
     display: block;
     padding: 8px 15px;
-    background-color: #D1E1E1; /* Cor de fundo das cápsulas do menu mobile */
+    background-color: #D1E1E1;
     border-radius: 20px;
     text-decoration: none;
     color: #669999;
@@ -175,8 +175,8 @@ header {
     background-color: #669999;
     height: 1px;
     width: 100%;
-    margin-top: 0px; /* Espaço entre o menu e a linha no mobile */
-    margin-bottom: 0px; /* Espaço entre a linha e o próximo conteúdo */
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 /* Estilos para Desktop (a partir de 768px de largura) */
@@ -189,7 +189,7 @@ header {
 
     /* Ajuste da logo para desktop */
     .logo {
-        height: 120px; /* Aumenta o tamanho da logo em telas grandes (desktop) */
+        height: 120px;
     }
 
     /* Mostra o menu de desktop e esconde o de mobile */
@@ -215,7 +215,7 @@ header {
 
     /* Ajuste da linha separadora para desktop */
     .header-line {
-        margin-top: 0px; /* Espaço entre o cabeçalho e a linha no desktop */
-        margin-bottom: 0px; /* Espaço entre a linha e o próximo conteúdo no desktop */
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 }
