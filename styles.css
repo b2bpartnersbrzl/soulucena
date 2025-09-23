@@ -99,6 +99,19 @@ body {
     height: 185px;
 }
 
+/* Estilos para a faixa de legenda */
+.image-caption-band {
+    width: 100%;
+    background-color: #D1E1E1;
+    color: #669999;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
 /* Estilos para Mobile (o padrão, para começar) */
 header {
     display: flex;
