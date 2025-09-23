@@ -34,7 +34,7 @@ body {
     background: linear-gradient(to left, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
     text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra para melhor contraste */
     pointer-events: none;
-    animation: pulse 1.2s infinite ease-in-out;
+    animation: pulseArrow 1.2s infinite ease-in-out;
 }
 
 .panoramic-wrapper::before {
@@ -52,18 +52,21 @@ body {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
     text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra para melhor contraste */
     pointer-events: none;
-    animation: pulse 2s infinite ease-in-out;
+    animation: pulseArrow 2s infinite ease-in-out;
     opacity: 0;
 }
 
-@keyframes pulse {
+@keyframes pulseArrow {
     0% {
+        color: white;
         transform: scaleX(1);
     }
     50% {
+        color: #D1E1E1;
         transform: scaleX(1.1);
     }
     100% {
+        color: white;
         transform: scaleX(1);
     }
 }
