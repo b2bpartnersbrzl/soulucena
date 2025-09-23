@@ -143,6 +143,7 @@ header {
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
     margin-top: 10px;
+    padding: 0 10px; /* Adicionado para manter o espaçamento lateral consistente */
 }
 
 /* Ocultar a barra de rolagem visualmente, mantendo a funcionalidade de rolagem */
