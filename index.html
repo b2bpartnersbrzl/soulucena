@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -72,7 +75,7 @@
             if (!isDown) return;
             e.preventDefault();
             const x = e.pageX - panoramicContainer.offsetLeft;
-            const walk = (x - startX) * 2; // Aumenta a sensibilidade da rolagem
+            const walk = (x - startX) * 2;
             panoramicContainer.scrollLeft = scrollLeft - walk;
         });
 
