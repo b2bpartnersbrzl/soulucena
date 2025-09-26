@@ -268,7 +268,7 @@ header {
 
 .service-card {
     flex: 0 0 auto;
-    /* width: 250px; <-- Removido para que a largura se adapte ao conteúdo */
+    width: 250px;
     padding: 20px;
     background-color: #D1E1E1;
     border-radius: 12px;
