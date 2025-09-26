@@ -251,9 +251,10 @@ header {
         width: 40px;
     }
 }
+
 /* Estilos da seção de cards de serviço */
 .service-cards-section {
-    padding: 20px;
+    padding: 20px 0; /* Remove padding horizontal */
 }
 
 .section-title {
@@ -266,7 +267,7 @@ header {
 .service-cards-container {
     display: flex;
     gap: 15px;
-    padding-bottom: 10px; /* Adiciona espaço para sombra do scrollbar em mobile */
+    padding: 0 20px 10px 20px; /* Adiciona o padding horizontal de volta */
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     white-space: nowrap;
@@ -309,6 +310,7 @@ header {
         justify-content: center;
         overflow-x: hidden;
         white-space: normal;
+        padding: 0; /* Zera o padding horizontal em desktop */
     }
 
     .service-card {
