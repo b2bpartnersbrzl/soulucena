@@ -9,7 +9,7 @@ body {
     font-family: 'Noto Sans', sans-serif;
     overflow-x: hidden;
     width: 100%;
-    padding-bottom: 50px; /* Adicionado para evitar que o conteúdo fique por trás do rodapé */
+    padding-bottom: 30px; /* Adicionado para evitar que o conteúdo fique por trás do rodapé */
 }
 
 /* Estilos para o wrapper da imagem panorâmica */
@@ -307,7 +307,7 @@ header {
     background-color: #669999;
     color: #D1E1E1;
     text-align: center;
-    padding: 10px 20px;
+    padding: 5px 20px;
     font-size: 12px;
     z-index: 1000;
 }
