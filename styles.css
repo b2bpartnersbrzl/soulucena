@@ -179,6 +179,10 @@ header {
     gap: 10px;
 }
 
+.mobile-menu ul li {
+    flex-shrink: 0;
+}
+
 .mobile-menu ul li a {
     display: block;
     padding: 8px 15px;
