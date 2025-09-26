@@ -135,7 +135,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 10px;
+    padding: 10px 10px 0;
     max-width: 100%; /* Previne overflow */
 }
 
@@ -158,8 +158,8 @@ header {
     overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
-    margin-top: 10px;
-    padding: 0 10px;
+    margin-top: 0;
+    padding: 10px 10px;
     max-width: 100%; /* Previne overflow */
 }
 
@@ -193,8 +193,8 @@ header {
     background-color: #669999;
     height: 1px;
     width: 100%;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 /* Estilos para Desktop (a partir de 768px de largura) */
@@ -235,8 +235,8 @@ header {
 
     /* Ajuste da linha separadora para desktop */
     .header-line {
-        margin-top: 0px;
-        margin-bottom: 0px;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
     /* Ajuste opcional para a imagem panorâmica no desktop */
