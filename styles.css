@@ -261,6 +261,13 @@ header {
     scrollbar-width: none;
 }
 
+/* Estilo do link que agora envolve todo o card */
+.service-card a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
 .service-card {
     flex: 0 0 auto;
     width: 250px;
@@ -269,6 +276,7 @@ header {
     border-radius: 12px;
     color: #669999;
     text-align: left;
+    cursor: pointer;
 }
 
 .service-card h3 {
@@ -279,15 +287,6 @@ header {
 .service-card p {
     font-size: 14px;
     white-space: normal;
-}
-
-/* Estiliza os links para ficarem em nova linha, negrito e fonte menor */
-.service-card p a {
-    display: block;
-    font-weight: bold;
-    font-size: 11px;
-    text-decoration: none;
-    color: #669999;
 }
 
 
