@@ -251,3 +251,69 @@ header {
         width: 40px;
     }
 }
+/* Estilos da seção de cards de serviço */
+.service-cards-section {
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 20px;
+    color: #669999;
+    margin-bottom: 20px;
+}
+
+.service-cards-container {
+    display: flex;
+    gap: 15px;
+    padding-bottom: 10px; /* Adiciona espaço para sombra do scrollbar em mobile */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+}
+
+.service-cards-container::-webkit-scrollbar {
+    display: none;
+}
+
+.service-cards-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.service-card {
+    flex: 0 0 auto; /* Impede o card de crescer e encolher */
+    width: 250px;
+    padding: 20px;
+    background-color: #D1E1E1;
+    border-radius: 12px;
+    color: #669999;
+    text-align: left;
+}
+
+.service-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 14px;
+    white-space: normal; /* Permite que o texto quebre a linha */
+}
+
+/* Estilos para Desktop (a partir de 768px de largura) */
+@media (min-width: 768px) {
+    /* ... código anterior ... */
+
+    .service-cards-container {
+        justify-content: center;
+        overflow-x: hidden;
+        white-space: normal;
+    }
+
+    .service-card {
+        width: 220px;
+        flex: 1;
+        max-width: 280px;
+    }
+}
