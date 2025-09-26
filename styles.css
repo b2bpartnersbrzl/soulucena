@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Noto Sans', sans-serif;
-    overflow-x: hidden; /* Impede scroll horizontal na página inteira */
+    overflow-x: hidden;
     width: 100%;
 }
 
@@ -20,7 +20,7 @@ body {
 
 /* Setas indicadoras de rolagem - SEM VÉU */
 .panoramic-wrapper::after {
-    content: '▶'; /* Seta para a direita */
+    content: '▶';
     position: absolute;
     top: 0;
     right: 0;
@@ -37,7 +37,7 @@ body {
 }
 
 .panoramic-wrapper::before {
-    content: '◀'; /* Seta para a esquerda */
+    content: '◀';
     position: absolute;
     top: 0;
     left: 0;
@@ -87,7 +87,7 @@ body {
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
     cursor: grab;
-    max-width: 100vw; /* Garante que não ultrapasse a viewport */
+    max-width: 100vw;
 }
 
 /* Quando o usuário está arrastando, o cursor muda para "grabbing" */
@@ -136,7 +136,7 @@ header {
     flex-direction: column;
     align-items: flex-start;
     padding: 10px 10px 0;
-    max-width: 100%; /* Previne overflow */
+    max-width: 100%;
 }
 
 .logo-container {
@@ -160,7 +160,7 @@ header {
     -webkit-overflow-scrolling: touch;
     margin-top: 0;
     padding: 10px 10px;
-    max-width: 100%; /* Previne overflow */
+    max-width: 100%;
 }
 
 /* Ocultar a barra de rolagem visualmente, mantendo a funcionalidade de rolagem */
@@ -186,15 +186,6 @@ header {
     border-radius: 20px;
     text-decoration: none;
     color: #669999;
-}
-
-/* Estilos da linha separadora para mobile (o padrão) */
-.header-line {
-    background-color: #669999;
-    height: 1px;
-    width: 100%;
-    margin-top: 0;
-    margin-bottom: 0;
 }
 
 /* Estilos para Desktop (a partir de 768px de largura) */
@@ -231,12 +222,6 @@ header {
         text-decoration: none;
         font-weight: bold;
         color: #669999;
-    }
-
-    /* Ajuste da linha separadora para desktop */
-    .header-line {
-        margin-top: 0;
-        margin-bottom: 0;
     }
 
     /* Ajuste opcional para a imagem panorâmica no desktop */
