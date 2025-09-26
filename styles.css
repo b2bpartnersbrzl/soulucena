@@ -281,6 +281,17 @@ header {
     white-space: normal;
 }
 
+/* Estiliza os links para ficarem em nova linha, negrito e fonte menor */
+.service-card p a {
+    display: block;
+    font-weight: bold;
+    font-size: 11px;
+    text-decoration: none;
+    color: #669999;
+    margin-top: 10px;
+}
+
+
 /* Estilos para Desktop (a partir de 768px de largura) */
 @media (min-width: 768px) {
     .service-cards-container {
