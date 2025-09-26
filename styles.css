@@ -157,7 +157,6 @@ header {
 .mobile-menu {
     width: 100%;
     overflow-x: auto;
-    white-space: nowrap;
     -webkit-overflow-scrolling: touch;
     margin-top: 0;
     padding: 10px 10px;
@@ -249,7 +248,6 @@ header {
     padding: 0 20px 10px 20px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    white-space: nowrap;
 }
 
 .service-cards-container::-webkit-scrollbar {
@@ -270,7 +268,7 @@ header {
 
 .service-card {
     flex: 0 0 auto;
-    width: 250px;
+    /* width: 250px; <-- Removido para que a largura se adapte ao conteúdo */
     padding: 20px;
     background-color: #D1E1E1;
     border-radius: 12px;
@@ -287,6 +285,7 @@ header {
 .service-card p {
     font-size: 14px;
     white-space: normal;
+    overflow-wrap: break-word; /* Garante que o texto irá quebrar dentro do card */
 }
 
 
@@ -295,7 +294,6 @@ header {
     .service-cards-container {
         justify-content: center;
         overflow-x: hidden;
-        white-space: normal;
         padding: 0;
     }
 
