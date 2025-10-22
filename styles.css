@@ -51,8 +51,6 @@ body {
     transition: opacity 0.5s ease-in-out; 
 }
 
-/* A keyframe pulseArrow foi removida por estar em desuso. */
-
 /* Classes para controlar a visibilidade dos véus */
 .panoramic-wrapper.show-left-veil::before {
     opacity: 1;
@@ -102,7 +100,7 @@ body {
 /* Estilos para a faixa de legenda */
 .image-caption-band {
     width: 100%;
-    background-color: #D1E1E1;
+    background-color: #FFCC00; /* Alterado de #D1E1E1 para #FFCC00 */
     color: #669999;
     text-align: center;
     padding: 5px 0;
@@ -167,10 +165,10 @@ header {
 .mobile-menu ul li a {
     display: block;
     padding: 8px 15px;
-    background-color: #D1E1E1;
+    background-color: #FFCC00; /* Alterado de #D1E1E1 para #FFCC00 */
     border-radius: 20px;
     text-decoration: none;
-    color: #FFCC00; /* Alterado para #FFCC00 */
+    color: #FFCC00; /* Cor do texto do menu mobile, mantida como #FFCC00 */
 }
 
 /* Estilos para Desktop (a partir de 768px de largura) */
@@ -206,7 +204,7 @@ header {
     .desktop-menu ul li a {
         text-decoration: none;
         font-weight: bold;
-        color: #FFCC00; /* Alterado para #FFCC00 */
+        color: #FFCC00; /* Cor do texto do menu desktop, mantida como #FFCC00 */
     }
 
     /* Ajuste opcional para a imagem panorâmica no desktop */
@@ -255,7 +253,7 @@ header {
     flex: 0 0 auto;
     width: 250px;
     padding: 20px;
-    background-color: #D1E1E1;
+    background-color: #FFCC00; /* Alterado de #D1E1E1 para #FFCC00 */
     border-radius: 12px;
     color: #669999;
     text-align: left;
@@ -297,7 +295,7 @@ header {
     left: 0;
     width: 100%;
     background-color: #669999;
-    color: #D1E1E1;
+    color: #FFCC00; /* Alterado de #D1E1E1 para #FFCC00 */
     text-align: center;
     padding: 5px 20px;
     font-size: 12px;
@@ -310,6 +308,6 @@ header {
 }
 
 .site-footer a {
-    color: #D1E1E1;
+    color: #FFCC00; /* Alterado de #D1E1E1 para #FFCC00 */
     text-decoration: underline;
 }
