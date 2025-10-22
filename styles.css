@@ -21,45 +21,6 @@ body {
     width: 100%;
 }
 
-/* VÉU DIREITO */
-.panoramic-wrapper::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 35px;
-    height: 100%;
-    background: linear-gradient(to left, #000000, rgba(0, 0, 0, 0)); /* Gradiente de véu preto */
-    display: block;
-    pointer-events: none;
-    z-index: 2;
-}
-
-/* VÉU ESQUERDO */
-.panoramic-wrapper::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 35px;
-    height: 100%;
-    background: linear-gradient(to right, #000000, rgba(0, 0, 0, 0)); /* Gradiente de véu preto */
-    display: block;
-    pointer-events: none;
-    z-index: 2;
-    opacity: 0; /* Começa invisível */
-    transition: opacity 0.5s ease-in-out; 
-}
-
-/* Classes para controlar a visibilidade dos véus */
-.panoramic-wrapper.show-left-veil::before {
-    opacity: 1;
-}
-
-.panoramic-wrapper.hide-right-veil::after {
-    opacity: 0;
-}
-
 /* Estilos para a imagem panorâmica */
 .panoramic-container {
     width: 100%;
@@ -168,7 +129,7 @@ header {
     background-color: #FFCC00; /* Fundo #FFCC00 */
     border-radius: 20px;
     text-decoration: none;
-    color: #FFCC00; /* Texto #FFCC00 */
+    color: #000000; /* Corrigido para preto absoluto para maior contraste */
 }
 
 /* Estilos para Desktop (a partir de 768px de largura) */
@@ -210,13 +171,6 @@ header {
     /* Ajuste opcional para a imagem panorâmica no desktop */
     .panoramic-image {
         height: 200px;
-    }
-
-    /* Ajuste das setas para desktop */
-    .panoramic-wrapper::after,
-    .panoramic-wrapper::before {
-        font-size: 25px;
-        width: 40px;
     }
 }
 
