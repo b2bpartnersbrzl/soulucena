@@ -100,14 +100,14 @@ body {
 /* Estilos para a faixa de legenda */
 .image-caption-band {
     width: 100%;
-    background-color: #FFCC00; /* Alterado de #D1E1E1 para #FFCC00 */
-    color: #669999;
+    background-color: #FFCC00; /* Fundo #FFCC00 */
+    color: #000000; /* Alterado de #669999 para preto absoluto */
     text-align: center;
     padding: 5px 0;
     margin-top: 0;
     font-weight: bold;
     letter-spacing: 2px;
-    font-size: 12px;
+    font-size: 10px; /* Alterado de 12px para 10px */
 }
 
 /* Estilos para Mobile (o padrão, para começar) */
@@ -165,10 +165,10 @@ header {
 .mobile-menu ul li a {
     display: block;
     padding: 8px 15px;
-    background-color: #FFCC00; /* Alterado de #D1E1E1 para #FFCC00 */
+    background-color: #FFCC00; /* Fundo #FFCC00 */
     border-radius: 20px;
     text-decoration: none;
-    color: #FFCC00; /* Cor do texto do menu mobile, mantida como #FFCC00 */
+    color: #FFCC00; /* Texto #FFCC00 */
 }
 
 /* Estilos para Desktop (a partir de 768px de largura) */
@@ -204,7 +204,7 @@ header {
     .desktop-menu ul li a {
         text-decoration: none;
         font-weight: bold;
-        color: #FFCC00; /* Cor do texto do menu desktop, mantida como #FFCC00 */
+        color: #FFCC00; /* Texto #FFCC00 */
     }
 
     /* Ajuste opcional para a imagem panorâmica no desktop */
@@ -253,9 +253,9 @@ header {
     flex: 0 0 auto;
     width: 250px;
     padding: 20px;
-    background-color: #FFCC00; /* Alterado de #D1E1E1 para #FFCC00 */
+    background-color: #FFCC00; /* Fundo #FFCC00 */
     border-radius: 12px;
-    color: #000000; /* Alterado de #669999 para preto absoluto */
+    color: #000000; /* Texto preto absoluto */
     text-align: left;
     cursor: pointer;
 }
@@ -295,7 +295,7 @@ header {
     left: 0;
     width: 100%;
     background-color: #669999;
-    color: #FFCC00; /* Alterado de #D1E1E1 para #FFCC00 */
+    color: #FFCC00; /* Texto #FFCC00 */
     text-align: center;
     padding: 5px 20px;
     font-size: 12px;
@@ -308,6 +308,6 @@ header {
 }
 
 .site-footer a {
-    color: #FFCC00; /* Alterado de #D1E1E1 para #FFCC00 */
+    color: #FFCC00; /* Link #FFCC00 */
     text-decoration: underline;
 }
