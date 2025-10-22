@@ -214,8 +214,7 @@ header {
     width: 100%;
     height: 200px; /* Altura fixa para criar o retângulo espaçoso */
     padding: 0; /* Removido para o padding ser controlado pelo overlay */
-    background-color: transparent; /* Alterado para transparente para o vídeo/overlay ser visível */
-    color: #000000;
+    background-color: #FFCC00; /* Retorna o fundo amarelo para cards sem vídeo */
     border-radius: 0; /* Remove o arredondamento */
     text-align: left;
     cursor: pointer;
@@ -233,27 +232,36 @@ header {
     z-index: 1; /* Coloca o vídeo abaixo do texto */
 }
 
-/* NOVO: Estilo para o overlay de conteúdo (texto) */
+/* NOVO: Estilo para o overlay de conteúdo (texto) - APLICA O PADDING */
 .card-content-overlay {
     position: relative; /* Necessário para estar acima do vídeo */
-    z-index: 2; /* Garante que o texto fique por cima do vídeo */
+    z-index: 2; /* Garante que o texto fique por cima */
     height: 100%; /* Ocupa a altura total */
-    padding: 30px; /* Mantém o padding de respiro para o texto */
-    /* Adiciona um gradiente escuro (overlay) para melhorar a legibilidade do texto sobre o vídeo */
-    background-color: rgba(0, 0, 0, 0.4);
+    padding: 30px; /* GARANTE O ESPAÇAMENTO INTERNO */
 }
 
+/* Regras de cor padrão para o texto (Aplicado aos cards amarelos) */
 .service-card h3 {
     font-size: 20px;
     margin-bottom: 15px;
-    color: #ffffff; /* Cor branca para contraste sobre o vídeo/overlay */
+    color: #000000; /* Cor preta para cards amarelos */
 }
 
 .service-card p {
     font-size: 16px;
     white-space: normal;
     overflow-wrap: break-word;
-    color: #ffffff; /* Cor branca para contraste sobre o vídeo/overlay */
+    color: #000000; /* Cor preta para cards amarelos */
+}
+
+/* Regras de Sobrescrita APENAS para Cards com Vídeo (Força o overlay escuro e o texto branco) */
+.service-card video + .card-content-overlay {
+    background-color: rgba(0, 0, 0, 0.4); /* Aplica o overlay escuro apenas no card com vídeo */
+}
+
+.service-card video + .card-content-overlay h3,
+.service-card video + .card-content-overlay p {
+    color: #ffffff; /* Garante que o texto fique branco sobre o vídeo/overlay escuro */
 }
 
 
