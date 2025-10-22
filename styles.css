@@ -21,41 +21,34 @@ body {
     width: 100%;
 }
 
-/* Estilos para a imagem panorâmica */
+/* Estilos para a imagem panorâmica - ALTERADO PARA BACKGROUND E ANIMAÇÃO */
 .panoramic-container {
     width: 100%;
-    overflow-x: auto;
+    overflow: hidden; /* Garante que a rolagem seja tratada pela animação e não pelo navegador */
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
-    cursor: grab;
     max-width: 100vw;
+    height: 185px; /* Define a altura do contêiner */
+    
+    /* Configuração do Background para o Efeito Carrossel */
+    background-image: url('images/imagem_marcas.webp'); /* URL da sua imagem */
+    background-repeat: repeat-x; /* Repete horizontalmente */
+    background-size: auto 100%; /* Ajusta a altura da imagem para preencher o contêiner, mantendo a proporção */
+    
+    /* Aplica a Animação */
+    animation: scroll-panoramic 40s linear infinite; /* 40s para um movimento lento e constante */
 }
 
-/* Quando o usuário está arrastando, o cursor muda para "grabbing" */
-.panoramic-container:active {
-    cursor: grabbing;
-}
+/* Os estilos .panoramic-container:active, cursores e scrollbar-hiding foram removidos pois não são mais necessários. */
 
-/* Ocultar a barra de rolagem visualmente, mantendo a funcionalidade de rolagem */
-.panoramic-container::-webkit-scrollbar {
-    display: none;
-}
-
-.panoramic-container {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-/* Impede que o usuário selecione a imagem ao arrastar */
-.panoramic-container img {
-    user-select: none;
-    -webkit-user-drag: none;
-}
-
-.panoramic-image {
-    width: auto;
-    height: 185px;
-    display: block;
+/* NOVO: Keyframes para a animação de rolagem */
+@keyframes scroll-panoramic {
+    from {
+        background-position: 0 0; /* Começa na posição 0 */
+    }
+    to {
+        background-position: -3000px 0; /* Move a posição X em um valor grande para simular o loop infinito da repetição do background */
+    }
 }
 
 /* Estilos para a faixa de legenda */
@@ -169,7 +162,7 @@ header {
     }
 
     /* Ajuste opcional para a imagem panorâmica no desktop */
-    .panoramic-image {
+    .panoramic-container { /* Altera a altura do container que agora segura o background */
         height: 200px;
     }
 }
