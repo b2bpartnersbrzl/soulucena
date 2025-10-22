@@ -101,13 +101,13 @@ body {
 .image-caption-band {
     width: 100%;
     background-color: #FFCC00; /* Fundo #FFCC00 */
-    color: #000000; /* Alterado de #669999 para preto absoluto */
+    color: #000000; /* Texto preto absoluto */
     text-align: center;
     padding: 5px 0;
     margin-top: 0;
     font-weight: bold;
     letter-spacing: 2px;
-    font-size: 10px; /* Alterado de 12px para 10px */
+    font-size: 10px; /* Tamanho reduzido */
 }
 
 /* Estilos para Mobile (o padrão, para começar) */
@@ -294,10 +294,10 @@ header {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #669999;
-    color: #FFCC00; /* Texto #FFCC00 */
+    background-color: #FFCC00; /* Alterado de #669999 para #FFCC00 */
+    color: #000000; /* Alterado de #FFCC00 para preto absoluto */
     text-align: center;
-    padding: 5px 20px;
+    padding: 3px 20px; /* Reduzido de 5px para 3px para diminuir a altura */
     font-size: 12px;
     z-index: 1000;
 }
@@ -308,6 +308,6 @@ header {
 }
 
 .site-footer a {
-    color: #FFCC00; /* Link #FFCC00 */
+    color: #000000; /* Alterado de #FFCC00 para preto absoluto */
     text-decoration: underline;
 }
