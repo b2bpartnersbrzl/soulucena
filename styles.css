@@ -183,7 +183,7 @@ header {
     /* Remove a rolagem horizontal e o padding lateral no mobile */
     display: flex;
     flex-direction: column; /* Empilha os cards no mobile */
-    gap: 0; /* Remove o espaçamento entre os elementos */
+    gap: 0; /* Garante que não haja espaçamento entre os elementos no mobile */
     padding: 0;
     overflow-x: hidden;
     -webkit-overflow-scrolling: unset;
@@ -218,7 +218,7 @@ header {
     border-radius: 0; /* Remove o arredondamento */
     text-align: left;
     cursor: pointer;
-    margin-bottom: 0;
+    /* margin-bottom: 0; Removido para evitar espaçamento vertical desnecessário */
 }
 
 /* NOVO: Estilo para o vídeo de fundo do card */
@@ -267,6 +267,7 @@ header {
     .service-cards-container {
         flex-direction: row; /* Coloca os cards lado a lado no desktop */
         justify-content: flex-start;
+        gap: 0; /* Adicionado para garantir que não haja espaçamento entre os cards no desktop */
         overflow-x: hidden;
     }
 
