@@ -261,18 +261,19 @@ header {
     color: #ffffff; /* Força o texto para branco */
 }
 
+
 /* Estilos para Desktop (a partir de 768px de largura) - AJUSTADO */
 @media (min-width: 768px) {
     .service-cards-container {
         flex-direction: row; /* Coloca os cards lado a lado no desktop */
         justify-content: flex-start;
         overflow-x: hidden;
-        gap: 0; /* REMOVE QUALQUER ESPAÇO ENTRE OS CARDS */
     }
 
     .service-card {
-        flex: none; /* REMOVE O FLEX QUE CAUSA ESPAÇOS */
-        width: 25%; /* CADA CARD OCUPA EXATAMENTE 25% DA LARGURA */
+        flex: 1; /* Distribui o espaço igualmente entre os 4 cards */
+        width: auto;
+        max-width: none;
         height: 300px; /* Altura maior para desktop */
     }
 }
