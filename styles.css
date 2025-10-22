@@ -261,13 +261,13 @@ header {
     color: #ffffff; /* Força o texto para branco */
 }
 
-
 /* Estilos para Desktop (a partir de 768px de largura) - AJUSTADO */
 @media (min-width: 768px) {
     .service-cards-container {
         flex-direction: row; /* Coloca os cards lado a lado no desktop */
         justify-content: flex-start;
         overflow-x: hidden;
+        gap: 0; /* REMOVE QUALQUER ESPAÇO ENTRE OS CARDS */
     }
 
     .service-card {
