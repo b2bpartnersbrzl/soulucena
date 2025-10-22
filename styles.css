@@ -268,6 +268,9 @@ header {
         flex-direction: row; /* Coloca os cards lado a lado no desktop */
         justify-content: flex-start;
         overflow-x: hidden;
+        /* CORREÇÃO: Hack para eliminar micro respiros entre os cards no desktop. */
+        margin-left: -1px;
+        margin-right: -1px;
     }
 
     .service-card {
