@@ -254,8 +254,8 @@ header {
     width: 250px;
     padding: 20px;
     background-color: #FFCC00; /* Fundo #FFCC00 */
-    border-radius: 12px;
     color: #000000; /* Texto preto absoluto */
+    border-radius: 12px;
     text-align: left;
     cursor: pointer;
 }
@@ -294,10 +294,10 @@ header {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #FFCC00; /* Alterado de #669999 para #FFCC00 */
-    color: #000000; /* Alterado de #FFCC00 para preto absoluto */
+    background-color: #000000; /* Alterado de #FFCC00 para preto absoluto */
+    color: #666666; /* Alterado de #000000 para cinza escuro */
     text-align: center;
-    padding: 3px 20px; /* Reduzido de 5px para 3px para diminuir a altura */
+    padding: 3px 20px; /* Altura reduzida */
     font-size: 12px;
     z-index: 1000;
 }
@@ -308,6 +308,6 @@ header {
 }
 
 .site-footer a {
-    color: #000000; /* Alterado de #FFCC00 para preto absoluto */
+    color: #666666; /* Alterado de #000000 para cinza escuro */
     text-decoration: underline;
 }
