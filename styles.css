@@ -212,7 +212,8 @@ header {
     /* Ajustes para retângulos que ocupam 100% da largura em mobile */
     flex: 1 1 100%;
     width: 100%;
-    height: 200px; /* Altura fixa para criar o retângulo espaçoso */
+    min-height: 200px; /* Mudei height para min-height para garantir altura mínima */
+    height: auto; /* Permite crescer se necessário, mas todos terão pelo menos 200px */
     padding: 0; /* Removido para o padding ser controlado pelo overlay */
     background-color: #FFCC00; /* Retorna o fundo amarelo para cards sem vídeo */
     border-radius: 0; /* Remove o arredondamento */
@@ -274,7 +275,8 @@ header {
         flex: 1; /* Distribui o espaço igualmente entre os 4 cards */
         width: auto;
         max-width: none;
-        height: 300px; /* Altura maior para desktop */
+        min-height: 300px; /* Mudei height para min-height também no desktop */
+        height: auto;
     }
 }
 
