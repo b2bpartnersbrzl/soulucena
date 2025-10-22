@@ -232,36 +232,33 @@ header {
     z-index: 1; /* Coloca o vídeo abaixo do texto */
 }
 
-/* NOVO: Estilo para o overlay de conteúdo (texto) - APLICA O PADDING */
+/* NOVO: Estilo para o overlay de conteúdo (texto) - APLICA O PADDING E A COR PADRÃO */
 .card-content-overlay {
     position: relative; /* Necessário para estar acima do vídeo */
     z-index: 2; /* Garante que o texto fique por cima */
     height: 100%; /* Ocupa a altura total */
-    padding: 30px; /* GARANTE O ESPAÇAMENTO INTERNO */
+    padding: 30px; /* GARANTE O ESPAÇAMENTO INTERNO (O RESPIRO) */
+    color: #000000; /* Cor padrão do texto (preto) para cards amarelos */
 }
 
-/* Regras de cor padrão para o texto (Aplicado aos cards amarelos) */
+/* Regras de cor padrão para o texto (Usando 'inherit' ou nada para pegar a cor do .card-content-overlay) */
 .service-card h3 {
     font-size: 20px;
     margin-bottom: 15px;
-    color: #000000; /* Cor preta para cards amarelos */
+    color: inherit; /* Herda a cor do .card-content-overlay (preto) */
 }
 
 .service-card p {
     font-size: 16px;
     white-space: normal;
     overflow-wrap: break-word;
-    color: #000000; /* Cor preta para cards amarelos */
+    color: inherit; /* Herda a cor do .card-content-overlay (preto) */
 }
 
 /* Regras de Sobrescrita APENAS para Cards com Vídeo (Força o overlay escuro e o texto branco) */
 .service-card video + .card-content-overlay {
     background-color: rgba(0, 0, 0, 0.4); /* Aplica o overlay escuro apenas no card com vídeo */
-}
-
-.service-card video + .card-content-overlay h3,
-.service-card video + .card-content-overlay p {
-    color: #ffffff; /* Garante que o texto fique branco sobre o vídeo/overlay escuro */
+    color: #ffffff; /* Força o texto para branco */
 }
 
 
