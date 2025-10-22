@@ -174,19 +174,22 @@ header {
     }
 }
 
-/* Estilos da seção de cards de serviço */
+/* Estilos da seção de cards de serviço - AJUSTADO */
 .service-cards-section {
-    padding: 10px 0;
+    padding: 0; /* Remove padding externo acima e abaixo */
 }
 
 .service-cards-container {
+    /* Remove a rolagem horizontal e o padding lateral no mobile */
     display: flex;
-    gap: 15px;
-    padding: 0 20px 10px 20px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    flex-direction: column; /* Empilha os cards no mobile */
+    gap: 0; /* Remove o espaçamento entre os elementos */
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: unset;
 }
 
+/* Oculta as barras de rolagem que estavam nos cards-container */
 .service-cards-container::-webkit-scrollbar {
     display: none;
 }
@@ -204,40 +207,43 @@ header {
 }
 
 .service-card {
-    flex: 0 0 auto;
-    width: 250px;
-    padding: 20px;
-    background-color: #FFCC00; /* Fundo #FFCC00 */
-    color: #000000; /* Texto preto absoluto */
-    border-radius: 12px;
+    /* Ajustes para retângulos que ocupam 100% da largura em mobile */
+    flex: 1 1 100%; /* Permite que ocupe todo o espaço disponível verticalmente */
+    width: 100%;
+    height: 200px; /* Altura fixa para criar o retângulo espaçoso */
+    padding: 30px; /* Aumenta o padding interno para dar "respiro" ao texto */
+    background-color: #FFCC00;
+    color: #000000;
+    border-radius: 0; /* Remove o arredondamento */
     text-align: left;
     cursor: pointer;
+    margin-bottom: 0; /* Garante que não haja espaçamento inferior entre eles */
 }
 
 .service-card h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 20px; /* Aumenta um pouco o título */
+    margin-bottom: 15px;
 }
 
 .service-card p {
-    font-size: 14px;
+    font-size: 16px; /* Aumenta um pouco o texto */
     white-space: normal;
-    overflow-wrap: break-word; /* Garante que o texto irá quebrar dentro do card */
+    overflow-wrap: break-word;
 }
 
-
-/* Estilos para Desktop (a partir de 768px de largura) */
+/* Estilos para Desktop (a partir de 768px de largura) - AJUSTADO */
 @media (min-width: 768px) {
     .service-cards-container {
-        justify-content: center;
+        flex-direction: row; /* Coloca os cards lado a lado no desktop */
+        justify-content: flex-start; /* Alinha no início */
         overflow-x: hidden;
-        padding: 0;
     }
 
     .service-card {
-        width: 220px;
-        flex: 1;
-        max-width: 280px;
+        flex: 1; /* Distribui o espaço igualmente entre os 4 cards */
+        width: auto; /* Remove a largura fixa */
+        max-width: none; /* Remove a largura máxima */
+        height: 300px; /* Altura maior para desktop */
     }
 }
 
@@ -265,4 +271,3 @@ header {
     color: #666666; /* Alterado de #000000 para cinza escuro */
     text-decoration: underline;
 }
-/* A CHAVE EXTRA QUE CAUSAVA ERRO FOI REMOVIDA AQUI */
