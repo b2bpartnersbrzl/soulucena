@@ -255,7 +255,7 @@ header {
     padding: 20px;
     background-color: #FFCC00; /* Alterado de #D1E1E1 para #FFCC00 */
     border-radius: 12px;
-    color: #669999;
+    color: #000000; /* Alterado de #669999 para preto absoluto */
     text-align: left;
     cursor: pointer;
 }
