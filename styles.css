@@ -7,6 +7,8 @@
 
 body {
     font-family: 'Noto Sans', sans-serif;
+    background-color: #000000; /* Fundo preto absoluto */
+    color: #ffffff; /* Cor de texto padrão branco para legibilidade */
     overflow-x: hidden;
     width: 100%;
     padding-bottom: 30px; /* Adicionado para evitar que o conteúdo fique por trás do rodapé */
