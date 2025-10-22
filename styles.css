@@ -204,45 +204,71 @@ header {
     display: block;
     text-decoration: none;
     color: inherit;
+    position: relative; /* ESSENCIAL para posicionar o vídeo e o overlay */
+    height: 100%; /* Garante que o 'a' ocupe a altura do card */
 }
 
 .service-card {
     /* Ajustes para retângulos que ocupam 100% da largura em mobile */
-    flex: 1 1 100%; /* Permite que ocupe todo o espaço disponível verticalmente */
+    flex: 1 1 100%;
     width: 100%;
     height: 200px; /* Altura fixa para criar o retângulo espaçoso */
-    padding: 30px; /* Aumenta o padding interno para dar "respiro" ao texto */
-    background-color: #FFCC00;
+    padding: 0; /* Removido para o padding ser controlado pelo overlay */
+    background-color: transparent; /* Alterado para transparente para o vídeo/overlay ser visível */
     color: #000000;
     border-radius: 0; /* Remove o arredondamento */
     text-align: left;
     cursor: pointer;
-    margin-bottom: 0; /* Garante que não haja espaçamento inferior entre eles */
+    margin-bottom: 0;
+}
+
+/* NOVO: Estilo para o vídeo de fundo do card */
+.card-video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que o vídeo cubra todo o container */
+    z-index: 1; /* Coloca o vídeo abaixo do texto */
+}
+
+/* NOVO: Estilo para o overlay de conteúdo (texto) */
+.card-content-overlay {
+    position: relative; /* Necessário para estar acima do vídeo */
+    z-index: 2; /* Garante que o texto fique por cima do vídeo */
+    height: 100%; /* Ocupa a altura total */
+    padding: 30px; /* Mantém o padding de respiro para o texto */
+    /* Adiciona um gradiente escuro (overlay) para melhorar a legibilidade do texto sobre o vídeo */
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .service-card h3 {
-    font-size: 20px; /* Aumenta um pouco o título */
+    font-size: 20px;
     margin-bottom: 15px;
+    color: #ffffff; /* Cor branca para contraste sobre o vídeo/overlay */
 }
 
 .service-card p {
-    font-size: 16px; /* Aumenta um pouco o texto */
+    font-size: 16px;
     white-space: normal;
     overflow-wrap: break-word;
+    color: #ffffff; /* Cor branca para contraste sobre o vídeo/overlay */
 }
+
 
 /* Estilos para Desktop (a partir de 768px de largura) - AJUSTADO */
 @media (min-width: 768px) {
     .service-cards-container {
         flex-direction: row; /* Coloca os cards lado a lado no desktop */
-        justify-content: flex-start; /* Alinha no início */
+        justify-content: flex-start;
         overflow-x: hidden;
     }
 
     .service-card {
         flex: 1; /* Distribui o espaço igualmente entre os 4 cards */
-        width: auto; /* Remove a largura fixa */
-        max-width: none; /* Remove a largura máxima */
+        width: auto;
+        max-width: none;
         height: 300px; /* Altura maior para desktop */
     }
 }
