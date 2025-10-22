@@ -272,7 +272,10 @@ header {
     }
 
     .service-card {
-        flex: 1; /* Distribui o espaço igualmente entre os 4 cards */
+        flex-grow: 1; 
+        flex-shrink: 0; 
+        flex-basis: 25%;
+        
         width: auto;
         max-width: none;
         height: 300px; /* Altura maior para desktop */
