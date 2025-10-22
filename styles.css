@@ -21,66 +21,45 @@ body {
     width: 100%;
 }
 
-/* Setas indicadoras de rolagem - SEM VÉU */
+/* VÉU DIREITO */
 .panoramic-wrapper::after {
-    content: '▶';
+    content: '';
     position: absolute;
     top: 0;
     right: 0;
     width: 35px;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 25px;
-    color: white;
-    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to left, #000000, rgba(0, 0, 0, 0)); /* Gradiente de véu preto */
+    display: block;
     pointer-events: none;
-    animation: pulseArrow 1.2s infinite ease-in-out;
+    z-index: 2;
 }
 
+/* VÉU ESQUERDO */
 .panoramic-wrapper::before {
-    content: '◀';
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 35px;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 25px;
-    color: white;
-    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to right, #000000, rgba(0, 0, 0, 0)); /* Gradiente de véu preto */
+    display: block;
     pointer-events: none;
-    animation: pulseArrow 2s infinite ease-in-out;
-    opacity: 0;
+    z-index: 2;
+    opacity: 0; /* Começa invisível */
+    transition: opacity 0.5s ease-in-out; 
 }
 
-@keyframes pulseArrow {
-    0% {
-        color: #D1E1E1;
-        transform: scaleX(1);
-    }
-    50% {
-        color: #669999;
-        transform: scaleX(1.1);
-    }
-    100% {
-        color: #D1E1E1;
-        transform: scaleX(1);
-    }
-}
+/* A keyframe pulseArrow foi removida por estar em desuso. */
 
-/* Classes para controlar a visibilidade das setas */
+/* Classes para controlar a visibilidade dos véus */
 .panoramic-wrapper.show-left-veil::before {
     opacity: 1;
-    transition: opacity 0.5s ease-in-out;
 }
 
 .panoramic-wrapper.hide-right-veil::after {
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
 }
 
 /* Estilos para a imagem panorâmica */
