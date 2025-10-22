@@ -191,7 +191,7 @@ header {
     background-color: #D1E1E1;
     border-radius: 20px;
     text-decoration: none;
-    color: #669999;
+    color: #FFCC00; /* Alterado para #FFCC00 */
 }
 
 /* Estilos para Desktop (a partir de 768px de largura) */
@@ -227,7 +227,7 @@ header {
     .desktop-menu ul li a {
         text-decoration: none;
         font-weight: bold;
-        color: #669999;
+        color: #FFCC00; /* Alterado para #FFCC00 */
     }
 
     /* Ajuste opcional para a imagem panorâmica no desktop */
