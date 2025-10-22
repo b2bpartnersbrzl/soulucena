@@ -109,26 +109,6 @@
             const walk = (x - startX) * 2;
             panoramicContainer.scrollLeft = scrollLeft - walk;
         });
-
-        // Evento para controlar a visibilidade dos véus
-        panoramicContainer.addEventListener('scroll', () => {
-            const scrollPosition = panoramicContainer.scrollLeft;
-            const maxScroll = panoramicContainer.scrollWidth - panoramicContainer.clientWidth;
-
-            // Mostra ou esconde o véu esquerdo
-            if (scrollPosition > 0) {
-                panoramicWrapper.classList.add('show-left-veil');
-            } else {
-                panoramicWrapper.classList.remove('show-left-veil');
-            }
-
-            // Mostra ou esconde o véu direito
-            if (scrollPosition >= maxScroll) {
-                panoramicWrapper.classList.add('hide-right-veil');
-            } else {
-                panoramicWrapper.classList.remove('hide-right-veil');
-            }
-        });
     </script>
 
 </body>
