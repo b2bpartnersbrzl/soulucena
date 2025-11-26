@@ -39,8 +39,6 @@ body {
     animation: scroll-panoramic 40s linear infinite; /* 40s para um movimento lento e constante */
 }
 
-/* Os estilos .panoramic-container:active, cursores e scrollbar-hiding foram removidos pois não são mais necessários. */
-
 /* NOVO: Keyframes para a animação de rolagem */
 @keyframes scroll-panoramic {
     from {
@@ -125,6 +123,12 @@ header {
     color: #000000; /* Corrigido para preto absoluto para maior contraste */
 }
 
+/* Ocultar o vídeo em dispositivos móveis (padrão) */
+.header-video-container {
+    display: none; 
+}
+
+
 /* Estilos para Desktop (a partir de 768px de largura) */
 @media (min-width: 768px) {
     header {
@@ -164,6 +168,24 @@ header {
     /* Ajuste opcional para a imagem panorâmica no desktop */
     .panoramic-container { /* Altera a altura do container que agora segura o background */
         height: 200px;
+    }
+
+    /* NOVO: Estilos para o vídeo no cabeçalho */
+    .header-video-container {
+        width: 100%;
+        display: flex; /* Restaura a exibição e centralização para desktop */
+        justify-content: center; /* Centraliza o conteúdo horizontalmente */
+        align-items: center;
+        padding: 20px 0;
+        margin-top: 20px;
+        /* Sobrescreve o display: none padrão */
+    }
+
+    .header-video-bg {
+        max-width: 900px; /* Define uma largura máxima razoável para o vídeo */
+        width: 90%; /* Ocupa 90% do container */
+        height: auto; /* Mantém a proporção do vídeo */
+        display: block;
     }
 }
 
