@@ -170,11 +170,12 @@ header {
         height: 200px;
     }
 
-    /* NOVO: Estilos para o vídeo no cabeçalho */
+    /* NOVO: Estilos para o vídeo no cabeçalho (AJUSTADO) */
     .header-video-container {
-        width: 100%;
+        /* width: 100%; REMOVIDO */
+        flex-grow: 1; /* Permite que o container ocupe todo o espaço central entre logo e menu */
         display: flex; /* Restaura a exibição e centralização para desktop */
-        justify-content: center; /* Centraliza o conteúdo horizontalmente */
+        justify-content: center; /* Centraliza o conteúdo horizontalmente dentro do espaço */
         align-items: center;
         padding: 20px 0;
         margin-top: 20px;
