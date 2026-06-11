@@ -43,6 +43,12 @@
 
   if (!form || !status || !submitButton) return;
 
+  const configuredEndpoint = form.dataset.endpoint.trim();
+  if (configuredEndpoint) {
+    form.action = configuredEndpoint;
+    form.removeAttribute("enctype");
+  }
+
   const showStatus = (message, state) => {
     status.textContent = message;
     status.dataset.state = state;
@@ -62,7 +68,7 @@
     }
 
     formData.delete("website");
-    const endpoint = form.dataset.endpoint.trim() || form.action;
+    const endpoint = configuredEndpoint || form.action;
 
     submitButton.disabled = true;
     form.setAttribute("aria-busy", "true");
