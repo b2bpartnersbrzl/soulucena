@@ -90,7 +90,7 @@
       showStatus("Conversa iniciada. Em breve entraremos em contato.", "success");
     } catch {
       showStatus(
-        "Não foi possível enviar agora. Escreva para contato@souluc.com.br.",
+        "Não foi possível enviar agora. Escreva para contato@somosluc.com.br.",
         "error"
       );
     } finally {
