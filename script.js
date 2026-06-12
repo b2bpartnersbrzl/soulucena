@@ -43,29 +43,16 @@
 
   if (!form || !status || !submitButton) return;
 
+  const configuredEndpoint = form.dataset.endpoint.trim();
+  if (configuredEndpoint) {
+    form.action = configuredEndpoint;
+    form.removeAttribute("enctype");
+  }
+
   const showStatus = (message, state) => {
     status.textContent = message;
     status.dataset.state = state;
     status.classList.add("is-visible");
-  };
-
-  const buildEmailFallback = (formData) => {
-    const subject = encodeURIComponent(`Nova conversa - ${formData.get("empresa")}`);
-    const body = encodeURIComponent(
-      [
-        `Nome: ${formData.get("nome")}`,
-        `Empresa ou projeto: ${formData.get("empresa")}`,
-        `Área prioritária: ${formData.get("prioridade")}`,
-        `WhatsApp: ${formData.get("telefone")}`,
-        `E-mail: ${formData.get("email")}`,
-        `Prazo importante: ${formData.get("prazo")}`,
-        "",
-        "O que podemos construir juntos:",
-        formData.get("mensagem"),
-      ].join("\n")
-    );
-
-    return `mailto:contato@souluc.com.br?subject=${subject}&body=${body}`;
   };
 
   form.addEventListener("submit", async (event) => {
@@ -81,31 +68,23 @@
     }
 
     formData.delete("website");
-    const endpoint = form.dataset.endpoint.trim();
+    const endpoint = configuredEndpoint || form.action;
 
     submitButton.disabled = true;
     form.setAttribute("aria-busy", "true");
     showStatus("Iniciando conversa...", "loading");
-
-    if (!endpoint) {
-      window.location.href = buildEmailFallback(formData);
-      showStatus("Seu aplicativo de e-mail foi aberto com a mensagem preenchida.", "success");
-      submitButton.disabled = false;
-      form.removeAttribute("aria-busy");
-      return;
-    }
 
     let requestTimeout;
 
     try {
       const controller = new AbortController();
       requestTimeout = window.setTimeout(() => controller.abort(), 15000);
-      const response = await fetch(endpoint, {
+      await fetch(endpoint, {
         method: "POST",
         body: formData,
+        mode: "no-cors",
         signal: controller.signal,
       });
-      if (!response.ok) throw new Error("Falha no envio");
 
       form.reset();
       showStatus("Conversa iniciada. Em breve entraremos em contato.", "success");
